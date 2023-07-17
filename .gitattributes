@@ -1,0 +1,116 @@
+#  A general, hopefully informative .gitattributes file
+#+ Created for a repo with a Jupyter packages for AWS ML Cert on Udemyh
+##############################################################################
+#@brief:   A .gitattributes file for my Physics StackOverflow help on Higgs
+#@file     .gitattributes
+#@author   David BLACK    GH: @bballdave025
+#@since    2023-07-17
+#
+#  -v- In case this file gets copied to another repo without changing -v-
+#+ -v- this stuff, there will be a reference to the previous repo     -v-
+#@orig_repo  dwb-aws-mls-nb-typings
+#@project    dwb-aws-mls-nb-typings
+#@package    aws-mls-training
+#    @TODO - package, maybe
+#
+# Mostly here to preserve *NIX-style line endings, which are very important
+#+ for certain data and text files in the Bourne Again SHell (bash) files, 
+#+ ... The python files don't care.
+#
+#@ref : https://git-scm.com/docs/gitattributes
+#@archived-ref = "https://web.archive.org/web/20200527202947/" + \
+#                "https://git-scm.com/docs/gitattributes"
+#
+##############################################################################
+
+#
+#+ Set the default behavior, in case people don't have `core.autocrlf` set.
+#+ I don't know how to make this match core.autocrlf = input
+#+ The closest I can find is
+#+ @ref : https://stackoverflow.com/a/46592252/6505499
+#+ @archived-ref = "https://web.archive.org/web/20200527203643/" + \
+#+                "https://stackoverflow.com/questions/46590142/" + \
+#+                "what-is-the-differrence-between-text-auto-and-" + \
+#+                "text-eol-lf-in-gitattribu/46592252#46592252"
+#
+#>   If you write, in a single .gitattributes file, the two line sequence:
+#>      `* text=auto`
+#>      `* text eol=lf`
+#>  the second line's `text` overrides the first one's, so that `text`
+#>  is set (but not to a value) and `eol` is set to a value, with the
+#>  value being `lf`. Both lines matched, and the second line overrode
+#>  the first.
+#>   If you reverse the two lines:
+#>      `* text eol=lf`
+#>      `* text=auto`
+#>  then again both lines match but now the second line only
+#>  overrides the text setting, so now you have `text` set to `auto`
+#>  and eol set to lf.
+#>      `* text eol=lf`
+#>      `* text=auto`
+#>
+#  I'm pretty sure this second version is giving me what I want.
+#
+
+#
+##  Setting the default behavior, in case people don't have
+##+ `core.autocrlf` set.
+* text eol=lf
+* text=auto
+
+
+## Specific files that ABSOLUTELY need to be treated as text and have
+#+ *NIX-style endings. (Note we have no `*.ext text`, because we do
+#+ not want any files normalized and converted to native line endings
+#+ on checkout.) We also hate CRLF endings, unless someone has built
+#+ on VS or is doing CMD/PowerShell scripting
+
+
+## The LF line endings should always be there on checkout.
+*.ipynb          text eol=lf
+
+## Probably found automatically, but let's make sure
+*.sh             text eol=lf
+*.py             text eol=lf
+*.md             text eol=lf
+*.txt            text eol=lf
+*.cfg            text eol=lf
+*.bak            text eol=lf  
+        ## .gitignore shouldn't let any through
+*.log            text eol=lf  
+        ## .gitignore shouldn't let any through
+*.out            text eol=lf  
+        ## .gitignore shouldn't let any through
+*.csv            text eol=lf
+.gitignore       text eol=lf
+.gitattributes   text eol=lf
+
+
+## Denote all files that aren't binary, but which we don't want normalized
+*.zip           -text
+*.pdf           -text
+*.docx          -text
+*.doc           -text
+*.rtf           -text
+## I only had those for some testing. They might
+## go back in ... (?)
+
+
+## Denote all files that are truly binary and should not be modified
+*.dll           binary
+*.exe           binary
+*.pyc           binary  
+                        ##  I haven't used any for the project, yet,
+                        ##+ but I think it's a good practice when
+                        ##+ someting might be run on Windows
+                        ##  .gitignore should be set to keep out
+                        ##+ the __pycache__
+
+#image files (none yet in the repo)
+#audio files (none yet in the repo)
+#video files (none yet in the repo)
+
+
+## The following extensions exist on files inside the .git directory.
+## I assume that, with the 'auto', git will take care of them.
+# *.sample ; *.pack ; *.idx
