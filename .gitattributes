@@ -1,7 +1,7 @@
 #  A general, hopefully informative .gitattributes file
-#+ Created for a repo with a Jupyter packages for AWS ML Cert on Udemyh
+#+ Created for a repo with a Jupyter notebook for AWS ML Cert on Udemy
 ##############################################################################
-#@brief:   A .gitattributes file for my Physics StackOverflow help on Higgs
+#@brief:   A .gitattributes file for my AWS ML Cert course on Udemy
 #@file     .gitattributes
 #@author   David BLACK    GH: @bballdave025
 #@since    2023-07-17
