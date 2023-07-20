@@ -1,0 +1,6 @@
+Section5.Lecture54
+notebook: 'data_format_exploration.ipynb'
+
+Change "# it is right now a array of dimensions 10x1"
+to     "# it is right now an array of dimensions 10x1"
+
