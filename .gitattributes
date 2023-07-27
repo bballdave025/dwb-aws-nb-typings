@@ -93,7 +93,7 @@
 *.doc           -text
 *.rtf           -text
 ## I only had those for some testing. They might
-## go back in ... (?)
+#+ go back in ... (?)
 
 
 ## Denote all files that are truly binary and should not be modified
@@ -106,7 +106,8 @@
                         ##  .gitignore should be set to keep out
                         ##+ the __pycache__
 
-#image files (none yet in the repo)
+#image files (at least one now in the repo)
+*.jpg           binary
 #audio files (none yet in the repo)
 #video files (none yet in the repo)
 
