@@ -18,8 +18,8 @@ __pycache__/
 **/.ipynb_checkpoints/
 .ipynb_checkpoints/
 
-# Don't need the CSV files that will be downloaded each time, anyway
-*.csv
+# CSV files often used as input (though a lot are generated)
+#*.csv
 
 # None of those backup files from Linux(c)/vim
 *~
@@ -27,6 +27,9 @@ __pycache__/
 
 # None of those Windows Office (at least MS Word) backup files
 $~*
+
+# My cost reports don't really need to be online
+*.xlsx
 
 
 # The template from GitHub for a Python repo
