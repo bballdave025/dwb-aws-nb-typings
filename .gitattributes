@@ -108,6 +108,7 @@
 
 #image files (at least one now in the repo)
 *.jpg           binary
+*.png           binary
 #audio files (none yet in the repo)
 #video files (none yet in the repo)
 
